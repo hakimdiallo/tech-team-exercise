@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <h1 class="text-center">Tech Team Exercise</h1>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Product</label>
+    </div>
+    <select class="custom-select" id="inputGroupSelect01" (change)="showProduct($event.target.value)">
+      <option value=""></option>
+      <option *ngFor="let productId of productIds" value="{{productId}}">{{productId}}</option>
+    </select>
+  </div>
+  <hr *ngIf="filteredProducts">
+  <div *ngIf="filteredProducts" class="btn-group btn-group-lg" role="group" aria-label="...">
+    <button type="button" class="btn btn-outline-primary" (click)="createChart('line')">Line</button>
+    <button type="button" class="btn btn-secondary" (click)="createChart('bar')">Bar</button>
+    <button type="button" class="btn btn-success" (click)="createChart('radar')">Radar</button>
+    <button type="button" class="btn btn-info" (click)="createChart('pie')">Pie</button>
+    <button type="button" class="btn btn-warning" (click)="createChart('polarArea')">Polar Area</button>
+  </div>
+  <hr *ngIf="filteredProducts">
+  <div class="chart-container" style="position: relative; height:40vh; width:70vw">
+    <canvas #toto >{{ linechart }}</canvas>
+  </div>
+</div>

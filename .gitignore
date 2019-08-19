@@ -1,0 +1,51 @@
+# Eclipse
+.classpath
+.project
+.sonarlint/
+.recommenders/
+.metadata
+.settings/
+/.checkstyle
+.mvn
+bin/
+
+# Composer repo
+.composer
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode
+
+# Maven
+logs/
+target/
+
+*.log
+
+# vscode
+.vscode/
+
+#Mac os
+*.DS_Store
+
+#Node
+node
+node_modules
+package-lock.json
+
+#Spring
+.springBeans
+
+# front
+dist
+
+# Composer
+composer.phar
+vendor
+
+.sts4-cache/
+.factorypath
